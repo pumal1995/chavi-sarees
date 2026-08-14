@@ -3,159 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DELORA | Premium Sarees</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box}
+
 body{
-  font-family:Georgia,"Times New Roman",serif;
-  background:#090909;
-  color:#fff;
+    margin:0;
+    font-family:Georgia,"Times New Roman",serif;
+    background:#050505;
+    color:#fff;
 }
+
 header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:rgba(8,8,8,.96);
-  border-bottom:1px solid #b88a32;
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(0,0,0,.95);
+    border-bottom:1px solid #c99a35;
+    padding:14px 20px;
 }
+
 .nav{
-  max-width:1100px;
-  margin:auto;
-  padding:15px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
+
 .logo{
-  font-size:30px;
-  letter-spacing:5px;
-  color:#d8a947;
-  font-weight:bold;
+    color:#d7a83e;
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:4px;
 }
+
 .nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:22px;
-  font-size:14px;
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
 }
+
 .hero{
-  min-height:75vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:70px 20px;
-  background:
-  radial-gradient(circle at center,#3b2914 0,#090909 48%);
+    min-height:65vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    background:
+    radial-gradient(circle at center,#2b210d 0,#080808 45%,#000 100%);
 }
+
 .hero h1{
-  font-size:clamp(55px,12vw,100px);
-  color:#d9aa50;
-  letter-spacing:8px;
+    font-size:clamp(45px,10vw,90px);
+    margin:10px 0;
+    color:#e0ae43;
+    letter-spacing:6px;
 }
-.hero h2{
-  font-size:25px;
-  margin:10px 0;
-}
+
 .hero p{
-  color:#d5b46b;
-  font-style:italic;
-  font-size:19px;
+    font-size:20px;
+    color:#ddd;
 }
+
+.tagline{
+    color:#d7a83e;
+    font-style:italic;
+    font-size:22px;
+}
+
 .btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:14px 28px;
-  background:#d8a947;
-  color:#080808;
-  text-decoration:none;
-  border-radius:5px;
-  font-weight:bold;
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    border-radius:30px;
+    background:#d7a83e;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
 }
+
 .section{
-  max-width:1100px;
-  margin:auto;
-  padding:55px 20px;
+    max-width:1200px;
+    margin:auto;
+    padding:55px 18px;
 }
-.title{
-  text-align:center;
-  color:#d8a947;
-  font-size:34px;
-  margin-bottom:10px;
+
+.section h2{
+    text-align:center;
+    color:#d7a83e;
+    font-size:36px;
+    margin-bottom:35px;
 }
-.subtitle{
-  text-align:center;
-  color:#aaa;
-  margin-bottom:35px;
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
 }
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:22px;
-}
+
 .card{
-  background:#111;
-  border:1px solid #3b2b15;
-  border-radius:10px;
-  overflow:hidden;
-  transition:.3s;
+    background:#111;
+    border:1px solid #6e5220;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 5px 25px rgba(0,0,0,.5);
 }
-.card:hover{
-  transform:translateY(-5px);
-  border-color:#d8a947;
-}
+
 .card img{
-  width:100%;
-  height:330px;
-  object-fit:cover;
-  display:block;
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    display:block;
 }
-.card-info{
-  padding:16px;
-  text-align:center;
+
+.card-content{
+    padding:15px;
+    text-align:center;
 }
-.card-info h3{
-  color:#d8a947;
-  margin-bottom:7px;
+
+.card h3{
+    margin:5px 0 8px;
+    color:#fff;
 }
-.card-info p{
-  color:#aaa;
-  font-family:Arial,sans-serif;
-  font-size:14px;
+
+.price{
+    color:#e0ae43;
+    font-size:20px;
+    font-weight:bold;
+    margin:10px 0;
 }
+
 .order{
-  text-align:center;
-  background:linear-gradient(135deg,#17120a,#090909);
-  border-top:1px solid #4d3817;
-  border-bottom:1px solid #4d3817;
+    display:inline-block;
+    padding:10px 18px;
+    background:#25d366;
+    color:#fff;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
 }
-.order h2{
-  color:#d8a947;
-  font-size:35px;
-  margin-bottom:12px;
+
+.info{
+    text-align:center;
+    line-height:1.8;
+    color:#ddd;
 }
-.order p{
-  color:#ccc;
-  font-family:Arial,sans-serif;
+
+.form-box{
+    max-width:650px;
+    margin:auto;
+    background:#111;
+    padding:25px;
+    border:1px solid #76551f;
+    border-radius:15px;
 }
-.whatsapp{
-  background:#25d366;
-  color:#fff;
+
+.form-box input,
+.form-box textarea{
+    width:100%;
+    padding:14px;
+    margin:8px 0;
+    border:1px solid #76551f;
+    border-radius:8px;
+    background:#050505;
+    color:#fff;
+    font-size:16px;
 }
+
+.form-box button{
+    width:100%;
+    padding:15px;
+    margin-top:10px;
+    border:0;
+    border-radius:30px;
+    background:#25d366;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+}
+
 footer{
-  text-align:center;
-  padding:30px 15px;
-  color:#888;
-  font-family:Arial,sans-serif;
-  font-size:13px;
+    text-align:center;
+    padding:30px 15px;
+    border-top:1px solid #76551f;
+    color:#aaa;
 }
-.gold{color:#d8a947}
-@media(max-width:600px){
-  .nav a{display:none}
-  .logo{font-size:24px}
-  .hero{min-height:65vh}
-  .card img{height:360px}
+
+.gold{
+    color:#d7a83e;
 }
 </style>
 </head>
@@ -163,147 +202,321 @@ footer{
 <body>
 
 <header>
-  <div class="nav">
+<div class="nav">
     <div class="logo">DELORA</div>
-    <nav>
-      <a href="#home">HOME</a>
-      <a href="#collection">COLLECTION</a>
-      <a href="#about">ABOUT</a>
-      <a href="#order">ORDER</a>
-    </nav>
-  </div>
+    <div>
+        <a href="#collection">Collection</a>
+        <a href="#order">Order</a>
+    </div>
+</div>
 </header>
 
-<section class="hero" id="home">
-  <div>
-    <p>Elegance Woven, Beauty Bloomed</p>
+<section class="hero">
+<div>
+    <div class="tagline">Elegance Woven, Beauty Bloomed</div>
     <h1>DELORA</h1>
-    <h2>PREMIUM SAREES</h2>
-    <p>Hand Printed • Elegant • Unique</p>
+    <p>Premium Sarees for Every You</p>
     <a class="btn" href="#collection">VIEW COLLECTION</a>
-  </div>
+</div>
 </section>
 
 <section class="section" id="collection">
-  <h2 class="title">Our Collection</h2>
-  <p class="subtitle">Beautiful sarees selected for every special occasion</p>
 
-  <div class="grid">
+<h2>Our Saree Collection</h2>
 
-    <div class="card">
-      <img src="IMG-20260814-WA0004.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 01</h3>
-        <p>Premium Saree</p>
-      </div>
-    </div>
+<div class="products">
 
-    <div class="card">
-      <img src="IMG-20260814-WA0005.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 02</h3>
-        <p>Hand Printed Saree</p>
-      </div>
-    </div>
+<!-- 1 -->
+<div class="card">
+<img src="IMG-20260814-WA0004.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="IMG-20260814-WA0035.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 03</h3>
-        <p>Elegant Saree</p>
-      </div>
-    </div>
+<!-- 2 -->
+<div class="card">
+<img src="IMG-20260814-WA0005.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="IMG-20260814-WA0037.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 04</h3>
-        <p>Premium Quality</p>
-      </div>
-    </div>
+<!-- 3 -->
+<div class="card">
+<img src="IMG-20260814-WA0035.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="IMG-20260814-WA0038.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 05</h3>
-        <p>Unique Design</p>
-      </div>
-    </div>
+<!-- 4 -->
+<div class="card">
+<img src="IMG-20260814-WA0037.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="IMG-20260814-WA0041.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 06</h3>
-        <p>Beautiful Hand Print</p>
-      </div>
-    </div>
+<!-- 5 -->
+<div class="card">
+<img src="IMG-20260814-WA0038.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="IMG-20260814-WA0043.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 07</h3>
-        <p>Classic Saree</p>
-      </div>
-    </div>
+<!-- 6 -->
+<div class="card">
+<img src="IMG-20260814-WA0041.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="IMG-20260814-WA0046.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 08</h3>
-        <p>Elegant Collection</p>
-      </div>
-    </div>
+<!-- 7 -->
+<div class="card">
+<img src="IMG-20260814-WA0043.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="IMG-20260814-WA0047.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 09</h3>
-        <p>Premium Saree</p>
-      </div>
-    </div>
+<!-- 8 -->
+<div class="card">
+<img src="IMG-20260814-WA0046.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="IMG-20260814-WA0048.jpg">
-      <div class="card-info">
-        <h3>Delora Collection 10</h3>
-        <p>Hand Printed Saree</p>
-      </div>
-    </div>
+<!-- 9 -->
+<div class="card">
+<img src="IMG-20260814-WA0047.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
 
-  </div>
+<!-- 10 -->
+<div class="card">
+<img src="IMG-20260814-WA0048.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 11 -->
+<div class="card">
+<img src="IMG-20260814-WA0049.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 12 -->
+<div class="card">
+<img src="IMG-20260814-WA0051.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 13 -->
+<div class="card">
+<img src="IMG-20260814-WA0052.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 14 -->
+<div class="card">
+<img src="IMG-20260814-WA0053.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 15 -->
+<div class="card">
+<img src="new_photo_1_price_removed.jpg">
+<div class="card-content">
+<h3>Hand Printed Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 16 -->
+<div class="card">
+<img src="new_photo_2_price_removed.jpg">
+<div class="card-content">
+<h3>Hand Printed Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 17 -->
+<div class="card">
+<img src="new_photo_3_price_removed.jpg">
+<div class="card-content">
+<h3>Hand Printed Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 18 -->
+<div class="card">
+<img src="new_photo_4_price_removed.jpg">
+<div class="card-content">
+<h3>Hand Printed Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 19 -->
+<div class="card">
+<img src="photo_1_price_removed.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 20 -->
+<div class="card">
+<img src="photo_2_price_removed.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 21 -->
+<div class="card">
+<img src="photo_3_price_removed.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+<!-- 22 -->
+<div class="card">
+<img src="photo_4_price_removed.jpg">
+<div class="card-content">
+<h3>Premium Saree</h3>
+<div class="price">Rs. 3,500 – 6,000</div>
+<a class="order" href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20am%20interested%20in%20this%20saree.">ORDER NOW</a>
+</div>
+</div>
+
+</div>
 </section>
 
-<section class="section" id="about">
-  <h2 class="title">DELORA</h2>
-  <p class="subtitle">
-    More than just a saree — it's your style.
-  </p>
-
-  <div style="text-align:center;max-width:700px;margin:auto;color:#ccc;line-height:1.8;font-family:Arial,sans-serif">
-    Discover unique sarees created for women who love elegance,
-    quality and timeless beauty. Every design is carefully selected
-    to make you feel beautiful in every drape.
-  </div>
+<section class="section">
+<h2>Why DELORA?</h2>
+<div class="info">
+<p>✨ Premium Quality</p>
+<p>🌸 Elegant & Comfortable Designs</p>
+<p>💎 Trendy & Stylish Sarees</p>
+<p>🎨 Unique Hand Printed Designs</p>
+<p>🚚 Delivery Available</p>
+</div>
 </section>
 
-<section class="section order" id="order">
-  <h2>Order Your Saree</h2>
-  <p>For prices, availability and orders, contact us on WhatsApp.</p>
+<section class="section" id="order">
 
-  <a class="btn whatsapp"
-     href="https://wa.me/94703980606"
-     target="_blank">
-     💬 ORDER ON WHATSAPP
-  </a>
+<h2>Place Your Order</h2>
 
-  <p style="margin-top:18px">070 398 0606</p>
+<div class="form-box">
+
+<p class="info">
+Fill in your details and send your order directly to DELORA WhatsApp.
+</p>
+
+<input id="name" type="text" placeholder="Your Name" required>
+
+<input id="phone" type="tel" placeholder="Phone Number" required>
+
+<textarea id="address" rows="4" placeholder="Delivery Address" required></textarea>
+
+<input id="saree" type="text" placeholder="Saree / Product Name or Photo Number">
+
+<button onclick="sendOrder()">ORDER VIA WHATSAPP</button>
+
+</div>
 </section>
 
 <footer>
-  © 2026 <span class="gold">DELORA</span> Sarees
-  <br><br>
-  Elegance Woven, Beauty Bloomed
+<div class="logo">DELORA</div>
+<p>Elegance Woven, Beauty Bloomed</p>
+<p class="gold">Premium Sarees • Hand Printed Designs</p>
+<p>© 2026 DELORA Sarees</p>
 </footer>
 
+<script>
+function sendOrder(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
+let saree=document.getElementById("saree").value;
+
+if(!name || !phone || !address){
+    alert("Please fill in your Name, Phone Number and Address.");
+    return;
+}
+
+let message =
+"DELORA SAREE ORDER%0A%0A"+
+"Name: "+encodeURIComponent(name)+"%0A"+
+"Phone: "+encodeURIComponent(phone)+"%0A"+
+"Address: "+encodeURIComponent(address)+"%0A"+
+"Saree/Product: "+encodeURIComponent(saree)+"%0A%0A"+
+"Price Range: Rs. 3,500 - 6,000";
+
+window.open(
+"https://wa.me/94703980606?text="+message,
+"_blank"
+);
+}
+</script>
+
 </body>
-</html>
+                                   </html>
