@@ -3,612 +3,741 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DELORA | Premium Sarees</title>
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-margin:0;
-font-family:Georgia,"Times New Roman",serif;
-background:#050505;
-color:#fff;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
+body{
+    background:#050505;
+    color:#fff;
+    font-family:Georgia,"Times New Roman",serif;
+}
+
+/* HEADER */
 header{
-position:sticky;
-top:0;
-z-index:1000;
-height:105px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 32px;
-background:rgba(0,0,0,.96);
-border-bottom:1px solid #b88932;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    height:70px;
+    background:#050505;
+    border-bottom:1px solid #b8892f;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
 }
 
 .logo{
-color:#d9a441;
-font-size:46px;
-font-weight:bold;
-letter-spacing:5px;
+    color:#d9a63a;
+    font-size:36px;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+nav{
+    display:flex;
+    gap:28px;
 }
 
 nav a{
-color:#fff;
-text-decoration:none;
-font-size:22px;
-margin-left:38px;
+    color:#fff;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
 }
 
-nav a:hover{color:#d9a441}
-
-.hero{
-min-height:260px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:50px 20px;
-background:linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.82));
-border-bottom:1px solid #8c672b;
+/* INTRO */
+.intro{
+    text-align:center;
+    padding:45px 20px 30px;
 }
 
-.hero h1{
-color:#d9a441;
-font-size:48px;
-margin:0 0 12px;
-letter-spacing:3px;
+.intro h1{
+    color:#d9a63a;
+    font-size:38px;
+    margin-bottom:12px;
 }
 
-.hero p{
-font-size:20px;
-margin:5px 0;
+.intro p{
+    color:#ddd;
+    font-size:18px;
 }
 
+/* COLLECTION */
 .collection{
-max-width:1200px;
-margin:auto;
-padding:35px 20px 60px;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.collection-title{
+    text-align:center;
+    color:#d9a63a;
+    font-size:32px;
+    margin-bottom:30px;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
 }
 
+/* SAREE CARD */
 .card{
-background:#101010;
-border:1px solid #8c672b;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,.45);
+    background:#111;
+    border:1px solid #9b7229;
+    border-radius:18px;
+    overflow:hidden;
 }
 
 .card img{
-display:block;
-width:100%;
-height:auto;
-max-height:650px;
-object-fit:cover;
-background:#080808;
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    background:#111;
 }
 
-.info{
-text-align:center;
-padding:20px 15px 24px;
+.card-info{
+    text-align:center;
+    padding:22px;
 }
 
 .code{
-color:#d9a441;
-font-size:18px;
-font-weight:bold;
-letter-spacing:2px;
-margin-bottom:8px;
+    color:#aaa;
+    font-size:15px;
+    letter-spacing:2px;
+    margin-bottom:8px;
 }
 
-.info h2{
-font-size:25px;
-margin:5px 0 12px;
+.card h2{
+    font-size:25px;
+    margin-bottom:12px;
 }
 
 .price{
-color:#d9a441;
-font-size:27px;
-font-weight:bold;
-margin-bottom:18px;
+    color:#d9a63a;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:18px;
 }
 
 .order-btn{
-border:0;
-border-radius:30px;
-padding:14px 32px;
-background:#20d467;
-color:#fff;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
+    display:inline-block;
+    background:#20d66b;
+    color:#fff;
+    text-decoration:none;
+    padding:13px 28px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
 }
 
-.order-btn:hover{background:#17b956}
-
+/* ORDER FORM */
 .order-section{
-max-width:650px;
-margin:20px auto 70px;
-padding:35px 25px;
-background:#101010;
-border:1px solid #8c672b;
-border-radius:20px;
+    max-width:650px;
+    margin:50px auto;
+    padding:30px 22px;
+    background:#111;
+    border:1px solid #9b7229;
+    border-radius:18px;
 }
 
 .order-section h2{
-text-align:center;
-color:#d9a441;
-font-size:32px;
-margin-top:0;
+    text-align:center;
+    color:#d9a63a;
+    font-size:30px;
+    margin-bottom:25px;
 }
 
-.selected{
-text-align:center;
-font-size:20px;
-margin-bottom:22px;
+.form-group{
+    margin-bottom:17px;
 }
 
-form label{
-display:block;
-margin:13px 0 6px;
-font-size:17px;
+.form-group label{
+    display:block;
+    margin-bottom:7px;
 }
 
-form input,
-form textarea{
-width:100%;
-padding:14px;
-border-radius:8px;
-border:1px solid #777;
-background:#181818;
-color:#fff;
-font-size:16px;
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:13px;
+    background:#050505;
+    color:#fff;
+    border:1px solid #806021;
+    border-radius:8px;
+    font-size:16px;
 }
 
-form textarea{
-min-height:100px;
-resize:vertical;
+.form-group textarea{
+    height:100px;
 }
 
-.submit{
-width:100%;
-margin-top:22px;
-padding:15px;
-border:0;
-border-radius:30px;
-background:#20d467;
-color:#fff;
-font-size:20px;
-font-weight:bold;
-cursor:pointer;
+.submit-btn{
+    width:100%;
+    padding:15px;
+    border:0;
+    border-radius:30px;
+    background:#20d66b;
+    color:#fff;
+    font-size:19px;
+    font-weight:bold;
 }
 
+/* FOOTER */
 footer{
-text-align:center;
-padding:30px 15px;
-border-top:1px solid #8c672b;
-color:#bbb;
+    text-align:center;
+    padding:30px 20px;
+    border-top:1px solid #806021;
+    background:#000;
 }
 
-@media(max-width:600px){
-
-header{
-height:78px;
-padding:0 18px;
+footer h2{
+    color:#d9a63a;
+    letter-spacing:4px;
+    margin-bottom:10px;
 }
 
-.logo{
-font-size:31px;
-letter-spacing:3px;
+footer p{
+    color:#aaa;
 }
 
-nav a{
-font-size:17px;
-margin-left:14px;
-}
+/* MOBILE */
+@media(max-width:700px){
 
-.hero h1{
-font-size:34px;
-}
+    header{
+        height:65px;
+        padding:0 17px;
+    }
 
-.hero p{
-font-size:17px;
-}
+    .logo{
+        font-size:27px;
+        letter-spacing:3px;
+    }
 
-.collection{
-padding:25px 12px 45px;
-}
+    nav{
+        gap:18px;
+    }
 
-.grid{
-grid-template-columns:1fr;
-gap:20px;
-}
+    nav a{
+        font-size:17px;
+    }
+
+    .intro{
+        padding:35px 15px 20px;
+    }
+
+    .intro h1{
+        font-size:29px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        width:100%;
+        height:auto;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
 
-<div class="logo">DELORA</div>
+    <div class="logo">DELORA</div>
 
-<nav>
-<a href="#collection">Collection</a>
-<a href="#order">Order</a>
-</nav>
+    <nav>
+        <a href="#collection">Collection</a>
+        <a href="#order">Order</a>
+    </nav>
 
 </header>
 
 
-<section class="hero">
+<!-- INTRO -->
+<section class="intro">
 
-<h1>Premium Saree Collection</h1>
+    <h1>Premium Saree Collection</h1>
 
-<p>Elegance Woven, Beauty Bloomed</p>
-
-<p>Premium Sarees | Rs. 3,500 – 6,000</p>
+    <p>Elegance Woven, Beauty Bloomed</p>
 
 </section>
 
 
+<!-- COLLECTION -->
 <section class="collection" id="collection">
 
-<div class="grid">
+    <h2 class="collection-title">
+        Our Saree Collection
+    </h2>
+
+    <div class="grid">
 
 
-<div class="card">
-<img src="IMG-20260814-WA0004.jpg" alt="DELORA Saree GL001">
+        <!-- GL001 -->
+        <div class="card">
 
-<div class="info">
-<div class="code">GL001</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL001')">
-ORDER NOW
-</button>
-</div>
-</div>
+            <img src="IMG-20260814-WA0004.jpg"
+                 alt="DELORA GL001">
 
+            <div class="card-info">
 
-<div class="card">
-<img src="IMG-20260814-WA0005.jpg" alt="DELORA Saree GL002">
+                <div class="code">GL001</div>
 
-<div class="info">
-<div class="code">GL002</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL002')">
-ORDER NOW
-</button>
-</div>
-</div>
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL001"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
 
 
-<div class="card">
-<img src="IMG-20260814-WA0035.jpg" alt="DELORA Saree GL003">
+        <!-- GL002 -->
+        <div class="card">
 
-<div class="info">
-<div class="code">GL003</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL003')">
-ORDER NOW
-</button>
-</div>
-</div>
+            <img src="IMG-20260814-WA0035.jpg"
+                 alt="DELORA GL002">
 
+            <div class="card-info">
 
-<div class="card">
-<img src="IMG-20260814-WA0037.jpg" alt="DELORA Saree GL004">
+                <div class="code">GL002</div>
 
-<div class="info">
-<div class="code">GL004</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL004')">
-ORDER NOW
-</button>
-</div>
-</div>
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL002"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
 
 
-<div class="card">
-<img src="IMG-20260814-WA0038.jpg" alt="DELORA Saree GL005">
+        <!-- GL003 -->
+        <div class="card">
 
-<div class="info">
-<div class="code">GL005</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL005')">
-ORDER NOW
-</button>
-</div>
-</div>
+            <img src="IMG-20260814-WA0037.jpg"
+                 alt="DELORA GL003">
 
+            <div class="card-info">
 
-<div class="card">
-<img src="IMG-20260814-WA0041.jpg" alt="DELORA Saree GL006">
+                <div class="code">GL003</div>
 
-<div class="info">
-<div class="code">GL006</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL006')">
-ORDER NOW
-</button>
-</div>
-</div>
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL003"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
 
 
-<div class="card">
-<img src="IMG-20260814-WA0043.jpg" alt="DELORA Saree GL007">
+        <!-- GL004 -->
+        <div class="card">
 
-<div class="info">
-<div class="code">GL007</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL007')">
-ORDER NOW
-</button>
-</div>
-</div>
+            <img src="IMG-20260814-WA0038.jpg"
+                 alt="DELORA GL004">
 
+            <div class="card-info">
 
-<div class="card">
-<img src="IMG-20260814-WA0046.jpg" alt="DELORA Saree GL008">
+                <div class="code">GL004</div>
 
-<div class="info">
-<div class="code">GL008</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL008')">
-ORDER NOW
-</button>
-</div>
-</div>
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL004"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
 
 
-<div class="card">
-<img src="IMG-20260814-WA0047.jpg" alt="DELORA Saree GL009">
+        <!-- GL005 -->
+        <div class="card">
 
-<div class="info">
-<div class="code">GL009</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL009')">
-ORDER NOW
-</button>
-</div>
-</div>
+            <img src="IMG-20260814-WA0041.jpg"
+                 alt="DELORA GL005">
 
+            <div class="card-info">
 
-<div class="card">
-<img src="IMG-20260814-WA0048.jpg" alt="DELORA Saree GL010">
+                <div class="code">GL005</div>
 
-<div class="info">
-<div class="code">GL010</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL010')">
-ORDER NOW
-</button>
-</div>
-</div>
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL005"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
 
 
-<div class="card">
-<img src="IMG-20260814-WA0049.jpg" alt="DELORA Saree GL011">
+        <!-- GL006 -->
+        <div class="card">
 
-<div class="info">
-<div class="code">GL011</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL011')">
-ORDER NOW
-</button>
-</div>
-</div>
+            <img src="IMG-20260814-WA0043.jpg"
+                 alt="DELORA GL006">
 
+            <div class="card-info">
 
-<div class="card">
-<img src="IMG-20260814-WA0051.jpg" alt="DELORA Saree GL012">
+                <div class="code">GL006</div>
 
-<div class="info">
-<div class="code">GL012</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL012')">
-ORDER NOW
-</button>
-</div>
-</div>
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL006"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
 
 
-<div class="card">
-<img src="IMG-20260814-WA0052.jpg" alt="DELORA Saree GL013">
+        <!-- GL007 -->
+        <div class="card">
 
-<div class="info">
-<div class="code">GL013</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL013')">
-ORDER NOW
-</button>
-</div>
-</div>
+            <img src="IMG-20260814-WA0046.jpg"
+                 alt="DELORA GL007">
 
+            <div class="card-info">
 
-<div class="card">
-<img src="IMG-20260814-WA0053.jpg" alt="DELORA Saree GL014">
+                <div class="code">GL007</div>
 
-<div class="info">
-<div class="code">GL014</div>
-<h2>Premium Saree</h2>
-<div class="price">Rs. 3,500 – 6,000</div>
-<button class="order-btn" onclick="selectSaree('GL014')">
-ORDER NOW
-</button>
-</div>
-</div>
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL007"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
 
 
-</div>
+        <!-- GL008 -->
+        <div class="card">
+
+            <img src="IMG-20260814-WA0047.jpg"
+                 alt="DELORA GL008">
+
+            <div class="card-info">
+
+                <div class="code">GL008</div>
+
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL008"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GL009 -->
+        <div class="card">
+
+            <img src="IMG-20260814-WA0048.jpg"
+                 alt="DELORA GL009">
+
+            <div class="card-info">
+
+                <div class="code">GL009</div>
+
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL009"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GL010 -->
+        <div class="card">
+
+            <img src="IMG-20260814-WA0049.jpg"
+                 alt="DELORA GL010">
+
+            <div class="card-info">
+
+                <div class="code">GL010</div>
+
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL010"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GL011 -->
+        <div class="card">
+
+            <img src="IMG-20260814-WA0051.jpg"
+                 alt="DELORA GL011">
+
+            <div class="card-info">
+
+                <div class="code">GL011</div>
+
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL011"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GL012 -->
+        <div class="card">
+
+            <img src="IMG-20260814-WA0052.jpg"
+                 alt="DELORA GL012">
+
+            <div class="card-info">
+
+                <div class="code">GL012</div>
+
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL012"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- GL013 -->
+        <div class="card">
+
+            <img src="IMG-20260814-WA0053.jpg"
+                 alt="DELORA GL013">
+
+            <div class="card-info">
+
+                <div class="code">GL013</div>
+
+                <h2>Premium Saree</h2>
+
+                <div class="price">
+                    Rs. 3,500 – 6,000
+                </div>
+
+                <a class="order-btn"
+                   href="https://wa.me/94703980606?text=Hello%20DELORA%2C%20I%20want%20to%20order%20Saree%20GL013"
+                   target="_blank">
+                   ORDER NOW
+                </a>
+
+            </div>
+        </div>
+
+    </div>
 </section>
 
 
+<!-- ORDER FORM -->
 <section class="order-section" id="order">
 
-<h2>Place Your Order</h2>
+    <h2>Place Your Order</h2>
 
-<div class="selected">
-Selected Saree:
-<strong id="selectedCode">Please select a Saree</strong>
-</div>
+    <form id="orderForm">
 
-<form onsubmit="sendWhatsApp(event)">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="name"
+                   placeholder="Your Name" required>
+        </div>
 
-<label>Full Name</label>
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="phone"
+                   placeholder="Your Phone Number" required>
+        </div>
 
-<input
-id="name"
-type="text"
-required
-placeholder="Enter your full name">
+        <div class="form-group">
+            <label>Delivery Address</label>
+            <textarea id="address"
+                      placeholder="Your Full Address"
+                      required></textarea>
+        </div>
 
+        <div class="form-group">
+            <label>Saree Code</label>
 
-<label>Phone Number</label>
+            <select id="saree" required>
 
-<input
-id="phone"
-type="tel"
-required
-placeholder="Enter your phone number">
+                <option value="">Select Saree</option>
 
+                <option>GL001</option>
+                <option>GL002</option>
+                <option>GL003</option>
+                <option>GL004</option>
+                <option>GL005</option>
+                <option>GL006</option>
+                <option>GL007</option>
+                <option>GL008</option>
+                <option>GL009</option>
+                <option>GL010</option>
+                <option>GL011</option>
+                <option>GL012</option>
+                <option>GL013</option>
 
-<label>Delivery Address</label>
+            </select>
+        </div>
 
-<textarea
-id="address"
-required
-placeholder="Enter your complete delivery address"></textarea>
+        <button class="submit-btn" type="submit">
+            ORDER VIA WHATSAPP
+        </button>
 
-
-<label>Additional Note</label>
-
-<textarea
-id="note"
-placeholder="Any special request"></textarea>
-
-
-<button class="submit" type="submit">
-SEND ORDER VIA WHATSAPP
-</button>
-
-</form>
+    </form>
 
 </section>
 
 
+<!-- FOOTER -->
 <footer>
 
-<p>© 2026 DELORA | Premium Sarees</p>
+    <h2>DELORA</h2>
 
-<p>WhatsApp: +94 70 398 0606</p>
+    <p>Elegance Woven, Beauty Bloomed</p>
+
+    <p style="margin-top:10px;">
+        WhatsApp: +94 70 398 0606
+    </p>
 
 </footer>
 
 
 <script>
 
-let selectedSaree = "";
+document.getElementById("orderForm").addEventListener("submit",function(e){
 
-function selectSaree(code){
+    e.preventDefault();
 
-selectedSaree = code;
+    let name =
+    document.getElementById("name").value;
 
-document.getElementById("selectedCode").textContent = code;
+    let phone =
+    document.getElementById("phone").value;
 
-document.getElementById("order").scrollIntoView({
-behavior:"smooth"
-});
+    let address =
+    document.getElementById("address").value;
 
-}
+    let saree =
+    document.getElementById("saree").value;
 
+    let message =
+`Hello DELORA,
 
-function sendWhatsApp(event){
+I would like to place an order.
 
-event.preventDefault();
-
-if(!selectedSaree){
-
-alert("Please select a Saree first.");
-
-document.getElementById("collection").scrollIntoView({
-behavior:"smooth"
-});
-
-return;
-
-}
-
-
-const name =
-document.getElementById("name").value.trim();
-
-const phone =
-document.getElementById("phone").value.trim();
-
-const address =
-document.getElementById("address").value.trim();
-
-const note =
-document.getElementById("note").value.trim();
-
-
-const message =
-
-`DELORA SAREE ORDER
-
-Saree Code: ${selectedSaree}
-
+Saree Code: ${saree}
 Price Range: Rs. 3,500 – 6,000
 
 Customer Name: ${name}
-
 Phone Number: ${phone}
+Delivery Address: ${address}`;
 
-Delivery Address:
-${address}
+    let url =
+    "https://wa.me/94703980606?text="
+    + encodeURIComponent(message);
 
-Additional Note:
-${note || "None"}
+    window.open(url,"_blank");
 
-Please confirm availability and final price.`;
-
-
-const whatsappNumber = "94703980606";
-
-const url =
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-encodeURIComponent(message);
-
-
-window.open(url,"_blank");
-
-}
+});
 
 </script>
 
